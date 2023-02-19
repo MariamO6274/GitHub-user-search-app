@@ -82,6 +82,11 @@ body {
   align-items: center;
 }
 
+.form.dark {
+  background-color: var(--semiDark);
+  box-shadow: none;
+}
+
 #user {
   border: none;
   outline: none;
@@ -94,8 +99,17 @@ body {
   width: 184px;
 }
 
+#user.dark {
+  color: var(--white);
+  background-color: transparent;
+}
+
 #user::placeholder {
   color: var(--darkSky);
+}
+
+#user.dark::placeholder {
+  color: var(--white);
 }
 
 .btn {
@@ -109,4 +123,13 @@ body {
   border: none;
   border-radius: 10px;
   margin-left: 7px;
+}
+
+.error {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--error);
+  height: 25px;
 }
