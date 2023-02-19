@@ -2,7 +2,7 @@ const moon = document.querySelector("#moon");
 const sun = document.querySelector("#sun");
 const title = document.querySelector(".title");
 const themeText = document.querySelector(".theme-text");
-const form = document.querySelector(".form");
+const cards = document.querySelectorAll(".card");
 const input = document.querySelector("#user");
 const button = document.querySelector(".btn");
 
@@ -54,7 +54,7 @@ const flipTheme = (theme) => {
   title.classList.toggle("dark");
   themeText.classList.toggle("dark");
   input.classList.toggle("dark");
-  form.classList.toggle("dark");
+  Array.from(cards).forEach((card) => card.classList.toggle("dark"));
 };
 
 moon.addEventListener("click", () => flipTheme("dark"));

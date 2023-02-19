@@ -71,18 +71,21 @@ body {
   display: none;
 }
 
-.form {
-  padding: 7px 7px 7px 16px;
+.card {
   width: 100%;
-  background-color: var(--white);
-  margin-top: 36px;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
   border-radius: 15px;
+  background-color: var(--white);
+}
+
+.form {
+  padding: 7px 7px 7px 16px;
+  margin-top: 36px;
   display: flex;
   align-items: center;
 }
 
-.form.dark {
+.card.dark {
   background-color: var(--semiDark);
   box-shadow: none;
 }
@@ -132,4 +135,117 @@ body {
   line-height: 20px;
   color: var(--error);
   height: 25px;
+  width: fit-content;
+  margin-right: auto;
+}
+
+.user-info {
+  padding: 32px 24px 48px 24px;
+}
+
+.avatar-desktop {
+  display: none;
+}
+
+.info {
+  width: 100%;
+}
+
+.general {
+  display: flex;
+  align-items: center;
+  column-gap: 19px;
+}
+
+.avatar-mobile {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23.7px;
+  color: var(--darkBlue);
+  text-transform: capitalize;
+}
+
+.login {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19.25px;
+  color: var(--electric);
+}
+
+.join-date {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19.25px;
+  color: var(--gray);
+  margin-top: 6px;
+}
+
+.bio {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 25px;
+  color: var(--darkSky);
+  margin-top: 33px;
+}
+
+.statistic {
+  width: 100%;
+  border-radius: 10px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightBg);
+  margin-top: 23px;
+  column-gap: 30px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-title {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16.29px;
+  color: var(--darkSky);
+  text-transform: capitalize;
+}
+
+.amount {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23.7px;
+  margin-top: 8px;
+}
+
+.locations {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 16px;
+}
+
+.location-info {
+  position: relative;
+}
+
+.location-text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19.25px;
+  color: var(--darkSky);
+  position: absolute;
+  top: 0;
+  left: 33px;
+}
+
+.location-link {
+  text-decoration: none;
 }
