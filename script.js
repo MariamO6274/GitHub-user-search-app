@@ -74,9 +74,7 @@ const displayInfo = (user) => {
   login.textContent = "@" + user.login;
   const date = dateTransformer(user.created_at);
   joinDate.textContent = "Joined " + date;
-  bio.textContent =
-    user.bio ||
-    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
+  bio.textContent = user.bio || "There is no bio for this user...";
   repos.textContent = user.public_repos;
   followers.textContent = user.followers;
   following.textContent = user.following;
