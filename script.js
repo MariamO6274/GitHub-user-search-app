@@ -18,6 +18,7 @@ const city = document.querySelector("#city");
 const blog = document.querySelector("#blog");
 const twitter = document.querySelector("#twitter");
 const company = document.querySelector("#company");
+const errorElement = document.querySelector(".error");
 
 const octocat = {
   avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
@@ -53,6 +54,10 @@ const octocat = {
   updated_at: "2023-01-22T12:13:51Z",
   url: "https://api.github.com/users/octocat",
 };
+
+input.addEventListener("input", () => {
+  errorElement.textContent = "";
+});
 
 const dateTransformer = (date) => {
   const dateObj = new Date(date);
@@ -131,8 +136,9 @@ button.addEventListener("click", async (event) => {
     );
     const user = response.data;
     input.value = "";
-    console.log(user);
+    displayInfo(user);
   } catch (error) {
     console.log(error);
+    errorElement.textContent = "No result";
   }
 });
